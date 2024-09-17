@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        .imagen-circular {
+    width: 200px; /* Ajusta el tamaño según lo que necesites */
+    height: 200px; /* Asegúrate de que la imagen sea cuadrada */
+    border-radius: 50%; /* Esto hace que las esquinas se redondeen formando un círculo */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    border: 5px solid #000; /* Añadir un borde al círculo (opcional) */
+}
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +16,7 @@
 </head>
 <body>
     <h1>Jorge Luis Travieso Bueno</h1>
+    <img class="imagen-circular" src="IMG.jpg">
     <p>Welcome</p>
 </body>
 </html>
