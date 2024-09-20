@@ -43,7 +43,7 @@ body {
   height: 100px;
   filter: grayscale(1);
   border-radius: 50%;
-  box-shadow: 0 0 20px 1px gray;
+  box-shadow: 0 20 20px 1px gray;
 }
 
 .container div:nth-child(2) {
