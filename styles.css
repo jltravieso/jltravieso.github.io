@@ -116,3 +116,59 @@ body {
   top: 0px;
   z-index: 1; /* El panel blanco se desplaza detrás sin afectar la sombra */
 }
+
+/*hover*/
+
+/* Ocultamos el checkbox */
+.toggle-checkbox {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: repeat(2, 200px);
+}
+
+.card {
+  position: relative;
+  display: flex;
+}
+
+.container div:nth-child(2) {
+  background: whitesmoke;
+  color: gray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 20px 0 gray;
+  transition: 1s;
+  top: -200px;
+  z-index: 1;
+}
+
+/* Al hacer hover en la PC */
+.container:hover div:nth-child(2) {
+  top: 0px;
+}
+
+/* En móviles al hacer click, si el checkbox está marcado */
+.toggle-checkbox:checked ~ div:nth-child(2) {
+  top: 0px;
+}
+
+.container div:nth-child(1) {
+  background: gold;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 0 20px 1px gray;
+}
+
+.container div:nth-child(1) img {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(1);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 1px gray;
+}
