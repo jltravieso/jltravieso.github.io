@@ -81,3 +81,38 @@ body {
 .info {
   justify-content: left;
 }
+
+/*cambios*/
+
+.container div:nth-child(1) {
+  background: gold;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Aseguramos que el panel amarillo esté encima */
+  box-shadow: 0 0 20px 1px gray; /* Agrega la sombra aquí */
+}
+
+.container div:nth-child(1) img {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(1);
+  border-radius: 50%;
+  /* La sombra se elimina de la imagen y se mantiene solo en el div */
+}
+
+.container div:nth-child(2) {
+  background: whitesmoke;
+  color: gray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 20px 0 gray;
+  transition: 1s;
+  top: -200px;
+  z-index: 1; /* Panel blanco detrás del amarillo */
+}
+
+.container:hover div:nth-child(2) {
+  top: 0px;
+  z-index: 1; /* El panel blanco se desplaza detrás sin afectar la sombra */
+}
